@@ -1,0 +1,16 @@
+LiftGymBaseUrl">
+      <o:url>https://powerlift.acompli.net</o:url>
+    </o:service>
+    <o:service o:name="SubstrateOfficeIntelligenceInsightsService" o:authentication="2">
+      <o:url>https://[Substrate.BaseHost]/OfficeIntelligence/v1.0/insights</o:url>
+      <o:ticket o:policy="MBI_SSL" o:idprovider="1" o:target="[Substrate.AuthHost]" o:headerValue="Passport1.4 from-PP='{}&amp;p='" />
+      <o:ticket o:idprovider="3" o:headerValue="Bearer {}" o:resourceId="https://[Substrate.AuthHost]" o:authorityUrl="[ADALAuthorityUrl]" />
+    </o:service>
+    <o:service o:name="SubstrateOfficeIntelligenceIngestionService" o:authentication="2">
+      <o:url>https://[Substrate.BaseHost]/OfficeIntelligence/v1.0/ingestion</o:url>
+      <o:ticket o:policy="MBI_SSL" o:idprovider="1" o:target="[Substrate.AuthHost]" o:headerValue="Passport1.4 from-PP='{}&amp;p='" />
+      <o:ticket o:idprovider="3" o:headerValue="Bearer {}" o:resourceId="https://[Substrate.AuthHost]" o:authorityUrl="[ADALAuthorityUrl]" />
+    </o:service>
+    <o:service o:name="SubstrateOfficeFeedDocuments" o:authentication="2">
+      <o:url>https://[Substrate.BaseHost]/search/api/v1/recommendedDocuments</o:url>
+      <o:ticket o:policy="MBI_SSL" o:idprovider="1" o:target="[Subst

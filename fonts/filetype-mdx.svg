@@ -1,0 +1,17 @@
+   <o:ticket o:policy="MBI_SSL" o:idprovider="1" o:target="ssl.[Live.WebHost]" o:headerValue="Passport1.4 from-PP='{}&amp;p='" />
+      <o:ticket o:idprovider="3" o:headerValue="Bearer {}" o:resourceId="https://edumathrecognizer.microsoft.com" o:authorityUrl="https://login.windows.net/common/oauth2/authorize" />
+    </o:service>
+    <o:service o:name="PlannerAzureBaseUrl">
+      <o:url>https://management.azure.com</o:url>
+    </o:service>
+    <o:service o:name="PlannerBaseUrl">
+      <o:url>https://planner.cloud.microsoft</o:url>
+    </o:service>
+    <o:service o:name="PlannerEcsBaseUrl">
+      <o:url>https://ecs.office.com</o:url>
+    </o:service>
+    <o:service o:name="PlannerGraphBaseUrl">
+      <o:url>https://graph.microsoft.com</o:url>
+    </o:service>
+    <o:service o:name="ProjectGraphBaseUrl">
+ 

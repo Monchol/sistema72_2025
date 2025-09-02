@@ -1,0 +1,11 @@
+e o:name="TeamsUpgradeV2">
+      <o:url>https://[Teams.BaseHost]/api/mt/beta/me/settings/teamsupgradev2</o:url>
+      <o:ticket o:idprovider="3" o:headerValue="Bearer {}" o:resourceId="https://[Teams.BaseHost]/" o:authorityUrl="https://login.windows.net/common/oauth2/authorize" />
+    </o:service>
+    <o:service o:name="TeamsPresenceService">
+      <o:url>https://presence.[Teams.BaseHost]/</o:url>
+      <o:ticket o:idprovider="3" o:headerValue="Bearer {}" o:resourceId="https://presence.[Teams.BaseHost]/" o:authorityUrl="https://login.windows.net/common/oauth2/authorize" />
+    </o:service>
+    <o:service o:name="TeamsPresenceServiceAfD">
+      <o:url>https://teams.cloud.microsoft/ups/global/</o:url>
+      <o:ticket o:idprovider="3" o:headerValue="Bearer {}" o:resourceId="https://presence
