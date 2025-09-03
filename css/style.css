@@ -1,1 +1,36 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+.button-form:hover {
+    background-color: var(--bs-gray-100);
+    transition: 250ms;
+    border-radius: 5px;
+}
+
+.button-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.button-form-txt {
+    color: var(--bs-white) !important;
+}
+
+.button-form-txt:hover {
+    color: var(--bs-dark) !important;
+    transition: 250ms;
+}
+
+i {
+    margin: 0 !important;
+}
+
+.button-form-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.nav-icons {
+    transform: translateY(-1px);
+}

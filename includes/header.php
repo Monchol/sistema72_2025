@@ -21,24 +21,24 @@
                         <i class="bi bi-bootstrap-fill h2"></i>
                     </a>
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                        <li> <a href="#" class="nav-link text-secondary">
-                                <i class="bi bi-house"></i>
+                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                                <i class="bi bi-house h5 nav-icons"></i>
                                 Home
                             </a> </li>
-                        <li> <a href="#" class="nav-link text-white">
-                                <i class="bi bi-speedometer2"></i>
+                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                                <i class="bi bi-speedometer2 h5 nav-icons"></i>
                                 Dashboard
                             </a> </li>
-                        <li> <a href="#" class="nav-link text-white">
-                                <i class="bi bi-table"></i>
+                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                                <i class="bi bi-table h5 nav-icons"></i>
                                 Orders
                             </a> </li>
-                        <li> <a href="#" class="nav-link text-white">
-                                <i class="bi bi-grid"></i>
+                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                                <i class="bi bi-grid h5 nav-icons"></i>
                                 Products
                             </a> </li>
-                        <li> <a href="#" class="nav-link text-white">
-                                <i class="bi bi-person-circle"></i>
+                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                                <i class="bi bi-person-circle h5 nav-icons"></i>
                                 Customers
                             </a> </li>
                     </ul>
