@@ -5,7 +5,6 @@ require 'funciones/categorias.php';
 $categoria = verCategoriaPorID();
 
 include 'includes/header.html';
-include 'includes/nav.php';
 ?>
 
 <main class="container">

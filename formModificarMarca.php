@@ -5,7 +5,6 @@ require 'funciones/marcas.php';
 $marca = verMarcaPorID();
 
 include 'includes/header.html';
-include 'includes/nav.php';
 
 ?>
 <main class="container">

@@ -5,7 +5,6 @@ require 'funciones/productos.php';
 $chequeo = modificarProducto();
 
 include 'includes/header.html';
-include 'includes/nav.php';
 
 
 ?>
