@@ -4,7 +4,7 @@ require 'funciones/categorias.php';
 
 $chequeo = modificarCategoria();
 
-include 'includes/header.html';
+include 'includes/header.php';
 
 
 ?>

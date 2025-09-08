@@ -4,7 +4,7 @@ require 'funciones/marcas.php';
 
 $chequeo = modificarMarca();
 
-include 'includes/header.html';
+include 'includes/header.php';
 
 
 ?>
