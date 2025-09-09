@@ -3,8 +3,7 @@ require 'funciones/conexion.php';
 require 'funciones/usuarios.php';
 $chequeo = agregarUsuario();
 
-include 'includes/header.html';
-include 'includes/nav.php';
+include 'includes/header.php';
 ?>
 <main class="container">
     <h1> Alta de nuevo usuario </h1>
