@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
     <title>Document</title>
 </head>
 
@@ -16,30 +16,30 @@
         <div class="px-3 py-2 text-bg-dark border-bottom">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/"
+                    <a href="#"
                         class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
                         <i class="bi bi-bootstrap-fill h2"></i>
                     </a>
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                        <li class="button-form"> <a href="admin.php" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
                                 <i class="bi bi-house h5 nav-icons"></i>
                                 Home
                             </a> </li>
-                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                        <li class="button-form"> <a href="adminMarcas.php" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
                                 <i class="bi bi-speedometer2 h5 nav-icons"></i>
-                                Dashboard
+                                Brands
                             </a> </li>
-                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                        <li class="button-form"> <a href="adminCategorias.php" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
                                 <i class="bi bi-table h5 nav-icons"></i>
-                                Orders
+                                Categories
                             </a> </li>
-                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                        <li class="button-form"> <a href="adminProductos.php" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
                                 <i class="bi bi-grid h5 nav-icons"></i>
                                 Products
                             </a> </li>
-                        <li class="button-form"> <a href="#" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
+                        <li class="button-form"> <a href="adminUsuarios.php" class="button-form-txt nav-link d-flex gap-1 align-text-bottom">
                                 <i class="bi bi-person-circle h5 nav-icons"></i>
-                                Customers
+                                Users
                             </a> </li>
                     </ul>
                 </div>

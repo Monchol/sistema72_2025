@@ -56,7 +56,7 @@
     
         $idUsuario=$_GET["idUsuario"];
         $link=conectar();
-        $sql="SELECT idUsuario, usuNombre from usuario WHERE idUsuario='$idUsuario'";
+        $sql="SELECT idUsuario, usuNombre from usuarios WHERE idUsuario='$idUsuario'";
         $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
         $marca=mysqli_fetch_assoc($resultado);
         return $marca;
