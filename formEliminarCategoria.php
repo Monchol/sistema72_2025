@@ -1,24 +1,30 @@
 <?php
+
 require 'funciones/conexion.php';
-require 'funciones/productos.php';
-$chequeo = agregarProducto();
+require 'funciones/categorias.php';
+
+$chequeo = eliminarCategorias();
 
 include 'includes/header.php';
+
 ?>
+
 <main class="container">
-    <h1> Alta de nuevo Producto </h1>
+    <h1>Baja de Categoria</h1>
+
     <?php
     $class = 'danger';
-    $mensaje = 'No se puede agregar un Producto';
+    $mensaje = 'No se puede agregar una categoria';
 
     if ($chequeo) {
         $class = 'success';
-        $mensaje = 'Producto agregado correctamente';
+        $mensaje = 'Categoria eliminada correctamente';
     }
     ?>
     <div class="alert alert-<?= $class ?>">
         <?= $mensaje ?>
     </div>
+
 </main>
 <?php include 'includes/footer.php';
 ?>

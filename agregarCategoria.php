@@ -1,12 +1,11 @@
 <?php
 
 require 'funciones/conexion.php';
-require 'funciones/productos.php';
+require 'funciones/categorias.php';
 
-$chequeo = agregarCategoria();
+$chequeo = agregarCategorias();
 
-include 'includes/header.html';
-include 'includes/nav.php';
+include 'includes/header.php';
 
 ?>
 

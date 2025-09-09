@@ -10,7 +10,7 @@ if (!$idMarca) {
     exit;
 }
 
-$sql = "DELETE FROM marcas WHERE idMarca = $idMarca";
+$sql = "DELETE FROM marcas WHERE idMarca ='$idMarca'";
 $resultado = mysqli_query($link, $sql);
 
 if ($resultado) {

@@ -24,7 +24,7 @@ include 'includes/header.php';
         </thead>
         <tbody>
             <?php
-            while ($producto = mysqli_fetch_assocc($productos)) {
+            while ($producto = mysqli_fetch_assoc($productos)) {
                 ?>
                 <tr>
                     <td> <?= $producto['prdNombre'] ?></td>

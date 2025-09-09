@@ -5,7 +5,7 @@ require 'funciones/categorias.php';
 require 'funciones/productos.php';
 
 $marcas = listarMarcas();
-$categoria = listarCategorias();
+$categorias = listarCategorias();
 
 include 'includes/header.php';
 
@@ -22,8 +22,7 @@ include 'includes/header.php';
             </div>
             <div class="form-group">
                 <label for='prdProducto'>Precio del Producto:</label>
-                <input type="number" name="prdProducto" class="form-control" id="prdPrecio" min="1" step="0.01"
-                    required>
+                <input type="number" name="prdPrecio" class="form-control" id="prdPrecio" min="1" step="0.01" required>
             </div>
             <div class="form-group">
                 <label for="idMarca">Marca</label>
@@ -71,7 +70,7 @@ include 'includes/header.php';
 
             </div>
 
-            <button class="btn btn-dark mr-3 px-4" value="Agregar Producto">
+            <button class="btn btn-dark mr-3 my-3 px-4" value="Agregar Producto">Agregar Producto</button>
         </form>
     </div>
 </main>

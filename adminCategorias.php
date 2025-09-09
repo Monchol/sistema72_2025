@@ -2,7 +2,7 @@
 
 require 'funciones/conexion.php';
 require 'funciones/categorias.php';
-$marcas = listarCategorias();
+$categorias = listarCategorias();
 include 'includes/header.php';
 
 ?>
@@ -25,14 +25,14 @@ include 'includes/header.php';
         </thead>
         <tbody>
             <?php
-            while ($categoria = mysqli_fetch_assoc($Categorias)) {
+            while ($categoria = mysqli_fetch_assoc($categorias)) {
 
                 ?>
                 <tr>
                     <td><?= $categoria['idCategoria']; ?></td>
                     <td><?= $categoria['catNombre']; ?></td>
                     <td>
-                        <a href="formModificarCategoria.php?idMarca=
+                        <a href="formModificarCategoria.php?idCategoria=
                 <?= $marca['idCategoria'] ?>" class="btn btn-outline-secondary">
                             Modificar
                         </a>
@@ -41,7 +41,7 @@ include 'includes/header.php';
                     <td><?= $categoria['idCategoria']; ?></td>
                     <td><?= $categoria['catNombre']; ?></td>
                     <td>
-                        <a href="formEliminarMarca.php?idMarca=
+                        <a href="formEliminarCategoria.php?idCategoria=
                 <?= $categoria['idCategoria'] ?>" class="btn btn-outline-secondary">
                             Eliminar
                         </a>
