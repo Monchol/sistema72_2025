@@ -49,6 +49,24 @@ function agregarProducto(){
     return $resultado;
 }
 
+function modificarProducto(){
+
+    # Funcion para modificar marca utilizando el id de la misma y la sentencia UPDATE de SQL
+    $prdNombre=$_POST["prdNombre"];
+    $prdPrecio=$_POST["prdPrecio"];
+    $idCategoria=$_POST["idCategoria"];
+    $idMarca=$_POST["idMarca"];
+    $prdPresentacion=$_POST["idPresentacion"];
+    $prdStock=$_POST["prdStock"];
+    $idMarca=$_POST["idMarca"];
+    $mkNombre=$_POST["mkNombre"];
+
+    $link=conectar();
+    $sql="UPDATE productos SET prdNombre='$prdNombre', prdPrecio='$prdPrecio', idCategoria='$idCategoria', prdPresentacion='$prdPresentacion', prdStock='$prdStock' WHERE idMarca='$idMarca'";
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    return $resultado;
+}
+
 function verProductosPorID(){
     $idProducto=$_GET["idProducto"];
     $link=conectar();

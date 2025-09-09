@@ -51,7 +51,7 @@ function verCategoriaPorId(){
     $idCategoria=$_GET["idCategoria"];
     $link=conectar();
     $sql="SELECT idCategoria, catNombre from categorias WHERE idCategoria='$idCategoria'";
-    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    $resultado=mysqli_query($link, $sql) or die(mysqli_error($link));
     $categoria=mysqli_fetch_assoc($resultado);
     return $categoria;
 }

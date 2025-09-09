@@ -2,7 +2,7 @@
 require 'funciones/conexion.php';
 require 'funciones/categorias.php';
 
-$chequeo = modificarCategoria();
+$chequeo = modificarCategorias();
 
 include 'includes/header.php';
 
