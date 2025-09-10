@@ -19,7 +19,7 @@ include 'includes/header.php';
                 <th>Imagen</th>
                 <th>Marca</th>
                 <th>Categoria</th>
-                <th colspan="2"> <a href="formAgregarProducto.php" class="btn btn-dark"> Agregar </th>
+                <th colspan="2" class="col-3"> <a href="formAgregarProducto.php" class="btn btn-dark"> Agregar </th>
             </tr>
         </thead>
         <tbody>
@@ -31,14 +31,18 @@ include 'includes/header.php';
                     <td> <?= $producto['prdPrecio'] ?></td>
                     <td> <?= $producto['prdPresentacion'] ?></td>
                     <td> <?= $producto['prdStock'] ?></td>
-                    <td> <img src="productos/<?= $producto['prdImagem'] ?>" class="img-thumbnail"></td>
+                    <td> <img src="productos/<?= $producto['prdImagen'] ?>" class="img-thumbnail"></td>
                     <td> <?= $producto['mkNombre'] ?></td>
                     <td> <?= $producto['catNombre'] ?></td>
-                    <td>
-                        <a href="formModificarProducto.php?idProducto<?= $producto['idProducto'] ?>"
-                            class="btn btn-outline-secondary"> Modificar </a>
-                        <a href="formEliminarProducto.php?idProducto<?= $producto['idProducto'] ?>"
-                            class="btn btn-outline-danger"> Eliminar </a>
+                    <td class="d-flex gap-2">
+                        <form action="formModificarProducto.php" method="get" class="">
+                            <input type="hidden" name="idProducto" value="<?= $producto['idProducto'] ?>">
+                            <input type="submit" class="btn btn-outline-secondary" value="Modificar">
+                        </form>
+                        <form action="formEliminarProducto.php" method="post" class="">
+                            <input type="hidden" name="idProducto" value="<?= $producto['idProducto'] ?>">
+                            <input type="submit" class="btn btn-outline-danger" value="Elimniar">
+                        </form>
                     </td>
                 </tr>
                 <?php
@@ -47,6 +51,4 @@ include 'includes/header.php';
         </tbody>
     </table>
 </main>
-<?php
-include 'includes/footer.php';
-?>
+<?php include 'includes/footer.php'; ?>

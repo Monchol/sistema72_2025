@@ -61,10 +61,9 @@ function modificarProducto()
     $prdPrecio = $_POST["prdPrecio"];
     $idCategoria = $_POST["idCategoria"];
     $idMarca = $_POST["idMarca"];
-    $prdPresentacion = $_POST["idPresentacion"];
+    $prdPresentacion = $_POST["prdPresentacion"];
     $prdStock = $_POST["prdStock"];
     $idMarca = $_POST["idMarca"];
-    $mkNombre = $_POST["mkNombre"];
 
     $link = conectar();
     $sql = "UPDATE productos SET prdNombre='$prdNombre', prdPrecio='$prdPrecio', idCategoria='$idCategoria', prdPresentacion='$prdPresentacion', prdStock='$prdStock' WHERE idMarca='$idMarca'";
@@ -76,7 +75,7 @@ function verProductosPorID()
 {
     $idProducto = $_GET["idProducto"];
     $link = conectar();
-    $sql = "SELECT idProductos, prdNombre, prdPrecio, idMarca, idCategoria, prdPresentacion, prdStock, prdImagen FROM productos WHERE idProductos='$idProducto'";
+    $sql = "SELECT `idProducto`, `prdNombre`, `prdPrecio`, `prdPresentacion`, `prdStock`, `prdImagen`, `idMarca`, `idCategoria` FROM `productos` WHERE idProducto='$idProducto'";
     $resultado = mysqli_query($link, $sql);
     $producto = mysqli_fetch_assoc($resultado);
     return $producto;

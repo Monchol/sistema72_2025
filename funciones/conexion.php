@@ -5,7 +5,7 @@
 const SERVER = "localhost";
 const USUARIO = "root";
 const CLAVE = "";
-const BASE = "72catalogo2";
+const BASE = "72catalogo";
 function conectar()
 {
     /* Funcion llamada conectar que se encarga de conectar 

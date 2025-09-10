@@ -1,24 +1,31 @@
 <?php
+
 require 'funciones/conexion.php';
 require 'funciones/productos.php';
+
+$chequeo = eliminarProducto();
+
 include 'includes/header.php';
 
-$idProducto = $_GET['idProducto'] ?? null;
+?>
 
-if (!$idProducto) {
-    echo "<div class='container mt-5 alert alert-danger'>No se especificó el producto a eliminar.</div>";
-    exit;
-}
+<main class="container">
+    <h1>Baja de Categoria</h1>
 
-$sql = "DELETE FROM productos WHERE idProducto = $idProducto";
-$resultado = mysqli_query($link, $sql);
+    <?php
+    $class = 'danger';
+    $mensaje = 'No se puede eliminar el prodcuto';
 
-if ($resultado) {
-    header("Location: productos.php?msg=Producto eliminado correctamente");
-    exit;
-} else {
-    echo "<div class='container mt-5 alert alert-danger'>
-            Error al eliminar el producto: " . mysqli_error($link) . "
-          </div>";
-}
+    if ($chequeo) {
+        $class = 'success';
+        $mensaje = 'Producto eliminado correctamente';
+    }
+    ?>
+    <div class="alert alert-<?= $class ?>">
+        <?= $mensaje ?>
+    </div>
+
+</main>
+<?php include 'includes/footer.php';
+?>
 ?>
