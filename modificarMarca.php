@@ -20,7 +20,7 @@ include 'includes/header.php';
         $mensaje = 'Marca modificado correctamente';
     }
     ?>
-    <div class="alert alert-<?= $class ?>" <?= $mensaje ?>></div>
+    <div class="alert alert-<?= $class ?>"><?= $mensaje ?></div>
 </main>
 <?php
 include 'includes/footer.php';
