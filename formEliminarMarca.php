@@ -1,24 +1,30 @@
 <?php
+
 require 'funciones/conexion.php';
 require 'funciones/marcas.php';
+
+$chequeo = eliminarMarca();
+
 include 'includes/header.php';
 
-$idMarca = $_GET['idMarca'] ?? null;
+?>
 
-if (!$idMarca) {
-    echo "<div class='container mt-5 alert alert-danger'>No se especificó la marca a eliminar.</div>";
-    exit;
-}
+<main class="container">
+    <h1>Baja de Categoria</h1>
 
-$sql = "DELETE FROM marcas WHERE idMarca ='$idMarca'";
-$resultado = mysqli_query($link, $sql);
+    <?php
+    $class = 'danger';
+    $mensaje = 'No se puede eliminar la marca';
 
-if ($resultado) {
-    header("Location: marcas.php?msg=Marca eliminada correctamente");
-    exit;
-} else {
-    echo "<div class='container mt-5 alert alert-danger'>
-            Error al eliminar la marca: " . mysqli_error($link) . "
-          </div>";
-}
+    if ($chequeo) {
+        $class = 'success';
+        $mensaje = 'Marca eliminada correctamente';
+    }
+    ?>
+    <div class="alert alert-<?= $class ?>">
+        <?= $mensaje ?>
+    </div>
+
+</main>
+<?php include 'includes/footer.php';
 ?>

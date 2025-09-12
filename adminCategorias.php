@@ -32,19 +32,16 @@ include 'includes/header.php';
                     <td><?= $categoria['idCategoria']; ?></td>
                     <td><?= $categoria['catNombre']; ?></td>
                     <td>
-                        <a href="formModificarCategoria.php?idCategoria=
-                <?= $marca['idCategoria'] ?>" class="btn btn-outline-secondary">
-                            Modificar
-                        </a>
+                        <form action="formModificarCategoria.php" method="get">
+                            <input type="hidden" name="idCategoria" value="<?= $categoria['idCategoria']?>">
+                            <input type="submit" class="btn btn-outline-secondary" value="Modificar">
+                        </form>
                     </td>
-
-                    <td><?= $categoria['idCategoria']; ?></td>
-                    <td><?= $categoria['catNombre']; ?></td>
                     <td>
-                        <a href="formEliminarCategoria.php?idCategoria=
-                <?= $categoria['idCategoria'] ?>" class="btn btn-outline-secondary">
-                            Eliminar
-                        </a>
+                        <form action="formEliminarCategoria.php" method="post">
+                            <input type="hidden" name="idCategoria" value="<?= $categoria['idCategoria']?>">
+                            <input type="submit" class="btn btn-outline-danger" value="Eliminar">
+                        </form>
                     </td>
                 </tr>
 

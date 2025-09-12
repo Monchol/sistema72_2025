@@ -17,6 +17,7 @@ include 'includes/header.php';
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>E-mail</th>
+                <th>Estado</th>
                 <th colspan="2">
                     <a href="formAgregarUsuario.php" class="btn btn-dark"> Agregar</a>
                 </th>
@@ -31,8 +32,19 @@ include 'includes/header.php';
                     <td> <?= $usuario['usuNombre']; ?></td>
                     <td> <?= $usuario['usuApellido']; ?></td>
                     <td> <?= $usuario['usuEmail']; ?></td>
-                    <td> <a href="formModificarUsuario.php" class="btn btn-outline-secondary">Modificar</a></td>
-                    <td> <a href="formEliminarUsuario.php" class="btn btn-outline-secondary">Eliminar</a></td>
+                    <td> <?= $usuario['usuEstado']; ?></td>
+                    <td>                        
+                        <form action="formModificarUsuario.php" method="get" class="">
+                            <input type="hidden" name="idUsuario" value="<?= $usuario['idUsuario'] ?>">
+                            <input type="submit" class="btn btn-outline-secondary" value="Modificar">
+                        </form>
+                    </td>
+                    <td> 
+                        <form action="formEliminarUsuario.php" method="post" class="">
+                            <input type="hidden" name="idUsuario" value="<?= $usuario['idUsuario'] ?>">
+                            <input type="submit" class="btn btn-outline-danger" value="Elimniar">
+                        </form>
+                    </td>
                 </tr>
                 <?php
             }

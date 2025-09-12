@@ -1,24 +1,31 @@
 <?php
+
 require 'funciones/conexion.php';
 require 'funciones/usuarios.php';
+
+$chequeo = eliminarUsuario();
+
 include 'includes/header.php';
 
-$idUsuario = $_GET['idUsuario'] ?? null;
+?>
 
-if (!$idUsuario) {
-    echo "<div class='container mt-5 alert alert-danger'>No se especificó el usuario a eliminar.</div>";
-    exit;
-}
+<main class="container">
+    <h1>Baja de Usuario</h1>
 
-$sql = "DELETE FROM usuarios WHERE idUsuario = $idUsuario";
-$resultado = mysqli_query($link, $sql);
+    <?php
+    $class = 'danger';
+    $mensaje = 'No se puede eliminar el usuario';
 
-if ($resultado) {
-    header("Location: usuarios.php?msg=Usuario eliminado correctamente");
-    exit;
-} else {
-    echo "<div class='container mt-5 alert alert-danger'>
-            Error al eliminar el usuario: " . mysqli_error($link) . "
-          </div>";
-}
+    if ($chequeo) {
+        $class = 'success';
+        $mensaje = 'Usuario eliminado correctamente';
+    }
+    ?>
+    <div class="alert alert-<?= $class ?>">
+        <?= $mensaje ?>
+    </div>
+
+</main>
+<?php include 'includes/footer.php';
+?>
 ?>

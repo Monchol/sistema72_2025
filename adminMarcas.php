@@ -30,20 +30,17 @@ include 'includes/header.php';
                 <tr>
                     <td><?= $marca['idMarca']; ?></td>
                     <td><?= $marca['mkNombre']; ?></td>
-                    <td>
-                        <a href="formModificarMarca.php?idMarca=
-                <?= $marca['idMarca'] ?>" class="btn btn-outline-secondary">
-                            Modificar
-                        </a>
+                    <td class="col-lg-4">
+                        <form action="formModificarMarca.php" method="get">
+                            <input name="idMarca" type="hidden" value="<?= $marca['idMarca'] ?>">
+                            <input class="btn btn-outline-secondary" value="Modificar" type="submit">
+                        </form>
                     </td>
-
-                    <td><?= $marca['idMarca']; ?></td>
-                    <td><?= $marca['mkNombre']; ?></td>
                     <td>
-                        <a href="formEliminarMarca.php?idMarca=
-                <?= $marca['idMarca'] ?>" class="btn btn-outline-secondary">
-                            Eliminar
-                        </a>
+                        <form action="formEliminarMarca.php" method="post">
+                            <input name="idMarca" type="hidden" value="<?= $marca['idMarca'] ?>">
+                            <input class="btn btn-outline-danger" value="Eliminar" type="submit">
+                        </form>
                     </td>
                 </tr>
 

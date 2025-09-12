@@ -65,9 +65,8 @@ include 'includes/header.php';
 
 
             <div class="form-group">
-                <label for='prdImagen'>Imagen del Producto</label>
-                <input type="file" name="prdImagen" class="form-control-file" id="prdImagen">
-
+                <label for='prdImagen '>Imagen del Producto</label>
+                <input type="file" name="prdImagen" class="form-control" id="prdImagen">
             </div>
 
             <button class="btn btn-dark mr-3 my-3 px-4" value="Agregar Producto">Agregar Producto</button>

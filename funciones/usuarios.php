@@ -3,7 +3,7 @@
 
     function listarUsuarios(){
         $link=conectar();
-        $sql="SELECT idUsuario, usuNombre, usuApellido, usuEmail FROM usuarios WHERE usuEstado = 1";
+        $sql="SELECT idUsuario, usuNombre, usuApellido, usuEmail, usuEstado FROM usuarios";
         $resultado=mysqli_query($link,$sql);
         return $resultado;
     }
@@ -29,12 +29,7 @@
         $idUsuario=$_POST["idUsuario"];
         $usuEstado=$_POST["usuEstado"];
         $link = conectar();
-        $sql="UPDATE usuarios SET usuNombre='$usuNombre',
-                                  usuApellido='$usuApellido',
-                                  usuEmail='$usuEmail',
-                                  usuPass='$usuPass',
-                                  usuEstado='$usuEstado' 
-              WHERE idUsuario='$idUsuario'";
+        $sql="UPDATE `usuarios` SET `usuNombre`='$usuNombre',`usuApellido`='$usuApellido',`usuEmail`='$usuEmail',`usuPass`='$usuPass',`usuEstado`='$usuEstado' WHERE `idUsuario`='$idUsuario' ";
         $resultado=mysqli_query($link, $sql) or die(mysqli_error($link));
         return $resultado;
     }
@@ -56,7 +51,7 @@
     
         $idUsuario=$_GET["idUsuario"];
         $link=conectar();
-        $sql="SELECT idUsuario, usuNombre from usuarios WHERE idUsuario='$idUsuario'";
+        $sql="SELECT `idUsuario`, `usuNombre`, `usuApellido`, `usuEmail`, `usuPass` FROM `usuarios` WHERE `idUsuario`='$idUsuario'";
         $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
         $marca=mysqli_fetch_assoc($resultado);
         return $marca;

@@ -2,14 +2,14 @@
 require 'funciones/conexion.php';
 require 'funciones/marcas.php';
 
-$marca = verMarcaPorID();
+$marca = verMarcaPorId();
 
 include 'includes/header.php';
 
 ?>
 <main class="container d-flex flex-column p-5">
     <h1 class="align-self-start px-3">Modificar Marca</h1>
-    <form action="modificarMarca.php" method="POST" class="w-50 d-flex flex-column gap-3 m-2 p-5 border border-secondary rounded">
+    <form action="modificarMarca.php" method="POST" class="d-flex flex-column col-lg-6 col-md-6 col-sm-9 gap-3 m-5 p-5 border border-secondary rounded">
         <div class="d-none">
             <input type="text" name="idMarca" value="<?= $marca['idMarca'] ?>" required>
         </div>

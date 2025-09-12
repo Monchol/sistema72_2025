@@ -86,5 +86,7 @@ function eliminarProducto()
     $idProducto = $_POST['idProducto'];
     $link = conectar();
     $sql = "DELETE from productos WHERE idProducto='$idProducto'";
+    $resultado= mysqli_query($link, $sql) or die(msqli_error($link));
+    return $resultado;
 }
 ?>
