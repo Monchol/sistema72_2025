@@ -7,9 +7,9 @@ $marca = verMarcaPorId();
 include 'includes/header.php';
 
 ?>
-<main class="container d-flex flex-column p-5">
-    <h1 class="align-self-start px-3">Modificar Marca</h1>
-    <form action="modificarMarca.php" method="POST" class="d-flex flex-column col-lg-6 col-md-6 col-sm-9 gap-3 m-5 p-5 border border-secondary rounded">
+<main class="container">
+    <form action="modificarMarca.php" method="POST" class="d-flex flex-column col-lg-6 col-md-9 col-sm-12 gap-3 m-5 p-5 border border-secondary rounded">
+        <h1 class="align-self-start">Modificar Marca</h1>
         <div class="d-none">
             <input type="text" name="idMarca" value="<?= $marca['idMarca'] ?>" required>
         </div>

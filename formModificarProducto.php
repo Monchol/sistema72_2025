@@ -10,10 +10,10 @@ $categorias = listarCategorias();
 include 'includes/header.php';
 
 ?>
-<main class="container p-5">
-    <h1>Modificar Producto</h1>
-
-    <form action="modificarProducto.php" method="POST" class="d-flex flex-column gap-3 border border-secondary rounded p-5">
+<main class="container d-flex justify-content-center">
+    
+    <form action="modificarProducto.php" method="POST" class="d-flex flex-column col-lg-6 col-md-9 col-sm-12 gap-3 m-5 p-5 border border-secondary rounded">
+        <h1>Modificar Producto</h1>
         <div class="form-group d-none">
             <label class="form-label" for="idProducto">ID:</label>
             <input class="form-control" type="hidden" name="idProducto" value="<?= $producto['idProducto'] ?>" required>    

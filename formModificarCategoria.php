@@ -9,7 +9,7 @@ include 'includes/header.php';
 
 <main class="container">
     
-    <form action="modificarCategoria.php" method="POST" class="d-flex flex-column col-lg-6 col-md-6 col-sm-9 gap-3 m-5 p-5 border border-secondary rounded">
+    <form action="modificarCategoria.php" method="POST" class="d-flex flex-column col-lg-6 col-md-9 col-sm-12 gap-3 m-5 p-5 border border-secondary rounded">
         <h1>Modificar Categorias</h1>
         <div class="d-none">
             ID:
