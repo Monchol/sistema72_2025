@@ -27,7 +27,7 @@ include 'includes/header.php';
             while ($marca = mysqli_fetch_assoc($marcas)) {
 
                 ?>
-                <tr>
+                <tr class="element-<?= $marca['idMarca']?>">
                     <td><?= $marca['idMarca']; ?></td>
                     <td><?= $marca['mkNombre']; ?></td>
                     <td class="col-lg-4">

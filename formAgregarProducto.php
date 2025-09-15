@@ -8,7 +8,6 @@ $marcas = listarMarcas();
 $categorias = listarCategorias();
 
 include 'includes/header.php';
-
 ?>
 
 <main class="container">
@@ -27,29 +26,19 @@ include 'includes/header.php';
             <div class="form-group">
                 <label for="idMarca">Marca</label>
                 <select class="form-control" name="idMarca" id="idMarca" required>
-                    <option value="">Seleccione una Marca</option>
-                    <?php
-                    while ($marca = mysqli_fetch_assoc($marcas)) {
-                        ?>
+                <option value="" class="select-default">Seleccione una Marca</option>
+                <?php while ($marca = mysqli_fetch_assoc($marcas)):?>
                         <option value="<?= $marca['idMarca'] ?>"><?= $marca['mkNombre'] ?></option>
-                        <?php
-                    }
-                    ?>
-                </select>
+                <?php endwhile?>
+                    </select>
             </div>
-
-
             <div class="form-group">
                 <label for="idCategoria">Categoria</label>
                 <select class="form-control" name="idCategoria" id="idCategoria" required>
                     <option value="">Seleccione una Categoria</option>
-                    <?php
-                    while ($categoria = mysqli_fetch_assoc($categorias)) {
-                        ?>
+                    <?php while($categoria = mysqli_fetch_assoc($categorias)):?>
                         <option value="<?= $categoria['idCategoria'] ?>"><?= $categoria['catNombre'] ?></option>
-                        <?php
-                    }
-                    ?>
+                    <?php endwhile?>
                 </select>
             </div>
 
@@ -72,5 +61,6 @@ include 'includes/header.php';
             <button class="btn btn-dark mr-3 my-3 px-4" value="Agregar Producto">Agregar Producto</button>
         </form>
     </div>
+    <script src="/js/verificarCategoriasMarcas.js"></script>
 </main>
 <?php include 'includes/footer.php'; ?>

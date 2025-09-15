@@ -6,24 +6,32 @@ include 'includes/header.php';
     <h1>Alta de nuevo usuario</h1>
     <div class="alert alert-secondary p-4 col-8 mx-auto">
         <form action="agregarUsuario.php" method="POST">
-            Nombre:
+            
+            <div class="form-group">
+                <label for="" class="form-label">Nombre:</label>
+                <input class='form-control' type="text" name="usuNombre" required> <br>
+            </div>
 
-            <input class='form-control' type="text" name="usuNombre" required> <br>
-            Apellido:
+            <div class="form-group">
+                <label for="" class="form-label">Apellido:</label>
+                <input class='form-control' type="text" name="usuApellido" required> <br>
+            </div>
+            
+            <div class="form-group">
+                <label for="" class="form-label">E-mail:</label>
+                <input class='form-control' type="email" name="usuEmail" required>
+            </div>
 
-            <input class='form-control' type="text" name="usuApellido" required> <br>
-            E-mail:
-
-            <input class='form-control' type="email" name="usuEmail" required> <br>
-            Clave:
-
-            <input class='form-control' type="password" name="usuPass" required> <br>
-
-            <input class='form-control' type="submit" button class="btn btn-dark mr-3 px-4" value="Agregar">
+            <div class="form-group">
+                <label for="" class="form-label">Clave:</label>
+                <input class='form-control' type="password" name="usuPass" required> <br>
+            </div>    
+            
+            <div class="form-group">
+                <input class='form-control' type="submit" button class="btn btn-dark mr-3 px-4" value="Agregar">
+            </div>
+        
         </form>
-        <a href="adminUsuarios.php">
-            <button class="btn btn-outline-secondary my-4 p2">Volver al panel</button>
-        </a>
     </div>
 </main>
 <?php include 'includes/footer.php'; ?>

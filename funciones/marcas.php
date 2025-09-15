@@ -43,8 +43,13 @@ function eliminarMarca()
 
     $idMarca = $_POST["idMarca"];
     $link = conectar();
-    $sql = "DELETE FROM `marcas` WHERE `idMarca`='$idMarca' AND UPDATE `productos`  ";
-    $resultado = mysqli_query($link, $sql);
+    $sql = "
+    START TRANSACTION;
+    UPDATE `productos` SET `idMarca` = 1 WHERE `idMarca` = '$idMarca';
+    DELETE FROM `marcas` WHERE `idMarca` = '$idMarca';
+    COMMIT;
+    ";
+    $resultado = mysqli_multi_query($link, $sql);
     return $resultado;
 }
 

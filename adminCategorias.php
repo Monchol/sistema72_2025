@@ -28,7 +28,7 @@ include 'includes/header.php';
             while ($categoria = mysqli_fetch_assoc($categorias)) {
 
                 ?>
-                <tr>
+                <tr class="element-<?= $categoria['idCategoria']; ?>">
                     <td><?= $categoria['idCategoria']; ?></td>
                     <td><?= $categoria['catNombre']; ?></td>
                     <td>

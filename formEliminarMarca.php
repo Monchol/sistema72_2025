@@ -26,5 +26,6 @@ include 'includes/header.php';
     </div>
 
 </main>
+<script src="js/goToIndex.js"></script>
 <?php include 'includes/footer.php';
 ?>
