@@ -4,9 +4,10 @@ const sleep = (ms)=> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-sleep(ms).then('redirecting...');
+window.addEventListener('load', async()=>{
+    document.body.innerHTML = '<h2 style="text-align:center; margin-top: 50px;">Redirecting...</h2>';
 
-window.addEventListener('load', ()=>{
+    await sleep(ms);
     // Simulate an HTTP redirect:
     window.location.replace("/admin.php");
 })
