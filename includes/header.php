@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
-    <title>Document</title>
+    <title>CRUD 760</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">

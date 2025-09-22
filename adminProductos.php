@@ -8,7 +8,7 @@ include 'includes/header.php';
 
 <main class="container p-5">
     <h1> Panel de administracion de Productos </h1>
-    <a href="admin.php" class="btn btn-outline-secondary mb-3">Volver a Principal</a>
+    <a href="admin.php" class="btn btn-outline-secondary mb-3">Volver a principal</a>
     <table class="table table-bordered table-striped table-hover">
         <thead class="thead-dark">
             <tr>
