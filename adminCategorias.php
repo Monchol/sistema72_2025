@@ -8,7 +8,7 @@ include 'includes/header.php';
 ?>
 
 <main class="container p-5">
-    <h1> Panel de administracion de marcas </h1>
+    <h1> Panel de administracion de Categorias</h1>
     <a href="admin.php" class="btn btn-outline-secondary mb-3">
     Volver a principal
     </a>

@@ -51,3 +51,5 @@ include 'includes/header.php';
         </tbody>
     </table>
 </main>
+
+<?= include 'includes/footer.php' ?>
