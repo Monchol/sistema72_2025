@@ -7,9 +7,9 @@ include 'includes/header.php';
 
 ?>
 
-<main class="container">
+<main class="container p-5">
     <h1>Panel de Usuarios</h1>
-    <a href="admin.php" class="btn btn-outline-secondary m-3">Volver a principal</a>
+    <a href="admin.php" class="btn btn-outline-secondary mb-3">Volver a principal</a>
     <table class="table table-bordered table-striped table-hover">
         <thead class="thead-dark">
             <tr>
@@ -18,8 +18,8 @@ include 'includes/header.php';
                 <th>Apellido</th>
                 <th>E-mail</th>
                 <th>Estado</th>
-                <th colspan="2">
-                    <a href="formAgregarUsuario.php" class="btn btn-dark"> Agregar</a>
+                <th colspan="2" class="justify-content-end d-flex">
+                    <a href="formAgregarUsuario.php" class="btn btn-success"> Agregar</a>
                 </th>
             </tr>
         </thead>
@@ -33,13 +33,11 @@ include 'includes/header.php';
                     <td> <?= $usuario['usuApellido']; ?></td>
                     <td> <?= $usuario['usuEmail']; ?></td>
                     <td> <?= $usuario['usuEstado']; ?></td>
-                    <td>                        
+                    <td class='justify-content-end d-flex gap-2'>                        
                         <form action="formModificarUsuario.php" method="get" class="">
                             <input type="hidden" name="idUsuario" value="<?= $usuario['idUsuario'] ?>">
                             <input type="submit" class="btn btn-outline-secondary" value="Modificar">
                         </form>
-                    </td>
-                    <td> 
                         <form action="formEliminarUsuario.php" method="post" class="">
                             <input type="hidden" name="idUsuario" value="<?= $usuario['idUsuario'] ?>">
                             <input type="submit" class="btn btn-outline-danger" value="Elimniar">

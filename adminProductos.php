@@ -6,9 +6,9 @@ include 'includes/header.php';
 
 ?>
 
-<main class="container">
+<main class="container p-5">
     <h1> Panel de administracion de Productos </h1>
-    <a href="admin.php" class="btn btn-outline-secondary m-3">Volver a Principal</a>
+    <a href="admin.php" class="btn btn-outline-secondary mb-3">Volver a Principal</a>
     <table class="table table-bordered table-striped table-hover">
         <thead class="thead-dark">
             <tr>
@@ -19,7 +19,7 @@ include 'includes/header.php';
                 <th>Imagen</th>
                 <th>Marca</th>
                 <th>Categoria</th>
-                <th colspan="2" class="col-3"> <a href="formAgregarProducto.php" class="btn btn-dark"> Agregar </th>
+                <th colspan="2" class="d-flex justify-content-end"> <a href="formAgregarProducto.php" class="btn btn-success"> Agregar </th>
             </tr>
         </thead>
         <tbody>
@@ -34,7 +34,7 @@ include 'includes/header.php';
                     <td> <img src="productos/<?= $producto['prdImagen'] ?>" class="img-thumbnail"></td>
                     <td> <?= $producto['mkNombre'] ?></td>
                     <td> <?= $producto['catNombre'] ?></td>
-                    <td class="d-flex gap-2">
+                    <td class="d-flex gap-2 justify-content-end">
                         <form action="formModificarProducto.php" method="get" class="">
                             <input type="hidden" name="idProducto" value="<?= $producto['idProducto'] ?>">
                             <input type="submit" class="btn btn-outline-secondary" value="Modificar">

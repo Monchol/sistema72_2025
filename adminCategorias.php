@@ -7,9 +7,9 @@ include 'includes/header.php';
 
 ?>
 
-<main class="container">
+<main class="container p-5">
     <h1> Panel de administracion de marcas </h1>
-    <a href="admin.php" class="btn btn-outline-secondary m-3">
+    <a href="admin.php" class="btn btn-outline-secondary mb-3">
         VOLVER A PRINCIPAL
     </a>
     <table class="table table-bordered table-striped table-hover">
@@ -17,8 +17,8 @@ include 'includes/header.php';
             <tr>
                 <th>id</th>
                 <th>Categorias</th>
-                <th colspan="2">
-                    <a href="formAgregarCategoria.php" class="btn btn-dark"> Agregar</a>
+                <th colspan="2" class="d-flex gap-2 justify-content-end">
+                    <a href="formAgregarCategoria.php" class="btn btn-success"> Agregar</a>
                 </th>
 
             </tr>
@@ -31,13 +31,11 @@ include 'includes/header.php';
                 <tr class="element-<?= $categoria['idCategoria']; ?>">
                     <td><?= $categoria['idCategoria']; ?></td>
                     <td><?= $categoria['catNombre']; ?></td>
-                    <td>
+                    <td class="d-flex gap-2 justify-content-end">
                         <form action="formModificarCategoria.php" method="get">
                             <input type="hidden" name="idCategoria" value="<?= $categoria['idCategoria']?>">
                             <input type="submit" class="btn btn-outline-secondary" value="Modificar">
                         </form>
-                    </td>
-                    <td>
                         <form action="formEliminarCategoria.php" method="post">
                             <input type="hidden" name="idCategoria" value="<?= $categoria['idCategoria']?>">
                             <input type="submit" class="btn btn-outline-danger" value="Eliminar">
