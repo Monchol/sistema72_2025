@@ -38,3 +38,12 @@ i {
 .nav-icons {
     transform: translateY(-1px);
 }
+
+.img-thumbnail {
+    width: 40px;
+    aspect-ratio: 1/1;
+}
+
+.td-productos {
+    height: 100%;
+}

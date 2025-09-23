@@ -43,11 +43,10 @@ function eliminarCategorias()
 
     $idCategoria = $_POST["idCategoria"];
     $link = conectar();
-    $sql = "
-    START TRANSACTION;
-    UPDATE `productos` SET `idCategoria` = 1 WHERE `idCategoria` = '$idCategoria';
-    DELETE FROM `marcas` WHERE `idCategoria` = '$idCategoria';
-    COMMIT;
+    $sql = "START TRANSACTION;
+            UPDATE `productos` SET `idCategoria` = 1 WHERE `idCategoria` = '$idCategoria';
+            DELETE FROM `categorias` WHERE `idCategoria` = '$idCategoria';
+            COMMIT;
     ";
     $resultado = mysqli_multi_query($link, $sql);
     return $resultado;

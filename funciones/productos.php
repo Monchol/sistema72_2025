@@ -44,7 +44,7 @@ function subirArchivo()
     //valor si no envian un archivo
     if ($_FILES['prdImagen']['error'] == 0) {
         //verifica si el usuario subio una imagen sin errores
-        $dir = '../productos/'; // configura el directorio para las imagenes
+        $dir = 'productos/'; // configura el directorio para las imagenes
         $temp = $_FILES['prdImagen']['tmp_name']; // es el nombre temporal de la imagen
         $ext = pathinfo($_FILES['prdImagen']['name']);// variable para la extension de la imagen
         $prdImagen = time() . '.' . $ext['extension'];//timestamp + extension del archivo
@@ -52,7 +52,8 @@ function subirArchivo()
         // mueve le archivo subido al directorio definido en $dir con el nombre armado en $prdImagen
     } else {
         $prdImagen = "<script>console.log('no se subio la imagen')</script>";
-    };
+    }
+    ;
     return $prdImagen;
 }
 
@@ -117,7 +118,7 @@ function eliminarProducto()
     $idProducto = $_POST['idProducto'];
     $link = conectar();
     $sql = "DELETE from productos WHERE idProducto='$idProducto'";
-    $resultado= mysqli_query($link, $sql) or die(mysqli_error($link));
+    $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
     return $resultado;
 }
 ?>
