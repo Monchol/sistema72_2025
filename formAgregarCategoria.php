@@ -8,10 +8,10 @@ include 'includes/header.php';
 
 ?>
 
-<main class="container">
-    <h1>Alta de nueva categoria</h1>
-
+<main class="container p-5">
+    
     <div class="alert alert-secondary p-8 col-8 mx-auto">
+        <h1>Alta de nueva categoria</h1>
         <form class="col-12 gap-3 d-flex flex-column" action="agregarCategoria.php" method="POST" enctype="multipart/form-data">
             <div class="form-group col-12">
                 <label for='catNombre'>Nombre de la Categoria:</label>

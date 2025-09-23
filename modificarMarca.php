@@ -9,7 +9,7 @@ include 'includes/header.php';
 
 ?>
 
-<main class="container">
+<main class="container p-5">
     <h1>Modificar Marca</h1>
     <?php
     $class = 'danger';
@@ -21,6 +21,8 @@ include 'includes/header.php';
     }
     ?>
     <div class="alert alert-<?= $class ?>"><?= $mensaje ?></div>
+    <a href="adminMarcas.php" class="btn btn-outline-secondary">Volver</a>
+
 </main>
 <?php
 include 'includes/footer.php';

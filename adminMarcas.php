@@ -35,7 +35,7 @@ include 'includes/header.php';
                             <input name="idMarca" type="hidden" value="<?= $marca['idMarca'] ?>">
                             <input class="btn btn-outline-secondary" value="Modificar" type="submit">
                         </form>
-                        <form action="formEliminarMarca.php" method="post">
+                        <form action="eliminarMarca.php" method="post">
                             <input name="idMarca" type="hidden" value="<?= $marca['idMarca'] ?>">
                             <input class="btn btn-outline-danger" value="Eliminar" type="submit">
                         </form>

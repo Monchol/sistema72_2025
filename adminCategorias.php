@@ -36,7 +36,7 @@ include 'includes/header.php';
                             <input type="hidden" name="idCategoria" value="<?= $categoria['idCategoria']?>">
                             <input type="submit" class="btn btn-outline-secondary" value="Modificar">
                         </form>
-                        <form action="formEliminarCategoria.php" method="post">
+                        <form action="eliminarCategoria.php" method="post">
                             <input type="hidden" name="idCategoria" value="<?= $categoria['idCategoria']?>">
                             <input type="submit" class="btn btn-outline-danger" value="Eliminar">
                         </form>

@@ -39,9 +39,9 @@ include 'includes/header.php';
                             <input type="hidden" name="idProducto" value="<?= $producto['idProducto'] ?>">
                             <input type="submit" class="btn btn-outline-secondary" value="Modificar">
                         </form>
-                        <form action="formEliminarProducto.php" method="post" class="">
+                        <form action="eliminarProducto.php" method="post" class="">
                             <input type="hidden" name="idProducto" value="<?= $producto['idProducto'] ?>">
-                            <input type="submit" class="btn btn-outline-danger" value="Elimniar">
+                            <input type="submit" class="btn btn-outline-danger" value="Eliminar">
                         </form>
                     </td>
                 </tr>

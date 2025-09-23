@@ -1,4 +1,4 @@
-const ms = 3000;
+/*const ms = 3000;
 
 const sleep = (ms)=> {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -11,4 +11,4 @@ window.addEventListener('load', async()=>{
     // Simulate an HTTP redirect:
     window.location.replace("/admin.php");
 })
-
+*/

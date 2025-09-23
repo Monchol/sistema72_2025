@@ -8,7 +8,7 @@ include 'includes/header.php';
 ?>
 
 <main class="container p-5">
-    <h1>Panel de Usuarios</h1>
+    <h1>Panel de administracion de Usuarios</h1>
     <a href="admin.php" class="btn btn-outline-secondary mb-3">Volver a principal</a>
     <table class="table table-bordered table-striped table-hover">
         <thead class="thead-dark">
@@ -38,9 +38,9 @@ include 'includes/header.php';
                             <input type="hidden" name="idUsuario" value="<?= $usuario['idUsuario'] ?>">
                             <input type="submit" class="btn btn-outline-secondary" value="Modificar">
                         </form>
-                        <form action="formEliminarUsuario.php" method="post" class="">
+                        <form action="eliminarUsuario.php" method="post" class="">
                             <input type="hidden" name="idUsuario" value="<?= $usuario['idUsuario'] ?>">
-                            <input type="submit" class="btn btn-outline-danger" value="Elimniar">
+                            <input type="submit" class="btn btn-outline-danger" value="Eliminar">
                         </form>
                     </td>
                 </tr>

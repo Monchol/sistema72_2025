@@ -2,9 +2,9 @@
 include 'includes/header.php';
 ?>
 
-<main class="container">
-    <h1>Alta de nuevo usuario</h1>
+<main class="container p-5">
     <div class="alert alert-secondary p-4 col-8 mx-auto">
+        <h1>Alta de nuevo usuario</h1>
         <form action="agregarUsuario.php" method="POST">
             
             <div class="form-group">

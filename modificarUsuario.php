@@ -5,7 +5,7 @@ $chequeo = modificarUsuario();
 
 include 'includes/header.php';
 ?>
-<main class="container">
+<main class="container p-5">
     <h1> Modificar usuario </h1>
     <?php
     $class = 'danger';
@@ -19,5 +19,7 @@ include 'includes/header.php';
     <div class="alert alert-<?= $class ?>">
         <?= $mensaje ?>
     </div>
+    <a href="adminUsuarios.php" class="btn btn-outline-secondary">Volver</a>
+
 </main>
 <?php include 'includes/footer.php';?>

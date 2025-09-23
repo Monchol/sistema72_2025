@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link class="icon" rel="icon" href="img/crud-icon_.png" type="image/x-icon">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <title>CRUD 760</title>
 </head>

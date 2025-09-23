@@ -5,7 +5,7 @@ $chequeo = agregarProducto();
 
 include 'includes/header.php';
 ?>
-<main class="container">
+<main class="container p-5">
     <h1> Alta de nuevo Producto </h1>
     <?php
     $class = 'danger';
@@ -19,6 +19,7 @@ include 'includes/header.php';
     <div class="alert alert-<?= $class ?>">
         <?= $mensaje ?>
     </div>
+    <a href="adminProductos.php" class="btn btn-outline-secondary">Volver</a>
 </main>
 <?php include 'includes/footer.php';
 ?>

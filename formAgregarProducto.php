@@ -10,10 +10,10 @@ $categorias = listarCategorias();
 include 'includes/header.php';
 ?>
 
-<main class="container">
-    <h1> Alta de nuevo producto </h1>
-
+<main class="container p-5">
+    
     <div class="alert alert-secondary p-8 col-8 mx-auto">
+        <h1> Alta de nuevo producto </h1>
         <form action="agregarProducto.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for='prdNombre'>Nombre del Producto:</label>
