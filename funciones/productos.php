@@ -37,7 +37,7 @@ function subirArchivo()
     return $prdImagen;
 }
 */
-
+/*
 function subirArchivo()
 {
     $prdImagen = "noDisponible.jpg";
@@ -50,10 +50,30 @@ function subirArchivo()
         $prdImagen = time() . '.' . $ext['extension'];//timestamp + extension del archivo
         move_uploaded_file($temp, $dir . $prdImagen);
         // mueve le archivo subido al directorio definido en $dir con el nombre armado en $prdImagen
-    } else {
-        $prdImagen = "<script>console.log('no se subio la imagen')</script>";
+    } 
+    return $prdImagen;
+}
+*/
+function subirArchivo($imagenActual = 'noDisponible.jpg')
+{
+    $prdImagen = $imagenActual;
+
+    // Verificar si se ha enviado un archivo y no hubo error
+    if (isset($_FILES['prdImagen']) && $_FILES['prdImagen']['error'] === 0) {
+        $dir = 'productos/';
+
+        // Crear el directorio si no existe
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
+        }
+
+        $temp = $_FILES['prdImagen']['tmp_name'];
+        $ext = pathinfo($_FILES['prdImagen']['name'], PATHINFO_EXTENSION);
+        $prdImagen = time() . '.' . $ext;
+
+        move_uploaded_file($temp, $dir . $prdImagen);
     }
-    ;
+
     return $prdImagen;
 }
 
@@ -66,6 +86,7 @@ function agregarProducto()
     $prdPresentacion = $_POST["prdPresentacion"];
     $prdStock = $_POST["prdStock"];
     $prdImagen = subirArchivo();
+    
 
     $link = conectar();
     $sql = "INSERT INTO productos (idProducto, prdNombre, prdPrecio, prdPresentacion, prdStock, prdImagen, idMarca, idCategoria) VALUE
@@ -95,7 +116,8 @@ function modificarProducto()
     $prdPresentacion = $_POST["prdPresentacion"];
     $prdStock = $_POST["prdStock"];
     $idMarca = $_POST["idMarca"];
-    $prdImagen = subirArchivo();
+    $prdImagen = subirArchivo($_POST['prdImagen']);
+
 
     $link = conectar();
     $sql = "UPDATE productos SET prdNombre='$prdNombre', prdPrecio='$prdPrecio', idCategoria='$idCategoria', prdPresentacion='$prdPresentacion', prdStock='$prdStock', prdImagen='$prdImagen', idMarca='$idMarca' WHERE idProducto='$idProducto'";

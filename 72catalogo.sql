@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 15, 2025 at 10:31 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 07-10-2025 a las 16:42:15
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,22 +19,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `72catalogo`
+-- Base de datos: `72catalogo6`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorias`
+-- Estructura de tabla para la tabla `categorias`
 --
 
 CREATE TABLE `categorias` (
   `idCategoria` int(11) NOT NULL,
   `catNombre` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `categorias`
+-- Volcado de datos para la tabla `categorias`
 --
 
 INSERT INTO `categorias` (`idCategoria`, `catNombre`) VALUES
@@ -41,36 +42,36 @@ INSERT INTO `categorias` (`idCategoria`, `catNombre`) VALUES
 (2, 'Telefonos'),
 (3, 'Relojes'),
 (4, 'Tablets'),
-(5, 'Consolas'),
+(5, 'Consolasa'),
 (6, 'Tarjetas Graficas'),
 (7, 'Procesadores');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `marcas`
+-- Estructura de tabla para la tabla `marcas`
 --
 
 CREATE TABLE `marcas` (
   `idMarca` int(11) NOT NULL,
   `mkNombre` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `marcas`
+-- Volcado de datos para la tabla `marcas`
 --
 
 INSERT INTO `marcas` (`idMarca`, `mkNombre`) VALUES
 (1, 'Default'),
-(2, 'Apple'),
+(2, 'Apple6'),
 (3, 'Mazda Miata'),
-(4, 'AMD'),
+(4, 'AMDd'),
 (5, 'Intel');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos`
+-- Estructura de tabla para la tabla `productos`
 --
 
 CREATE TABLE `productos` (
@@ -82,19 +83,19 @@ CREATE TABLE `productos` (
   `prdImagen` tinytext NOT NULL,
   `idMarca` int(11) NOT NULL,
   `idCategoria` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `productos`
+-- Volcado de datos para la tabla `productos`
 --
 
 INSERT INTO `productos` (`idProducto`, `prdNombre`, `prdPrecio`, `prdPresentacion`, `prdStock`, `prdImagen`, `idMarca`, `idCategoria`) VALUES
-(1, 'Ryzen 4070', 1000000, 'LOL', 120210, '1757882773.jpeg', 4, 6);
+(6, 'f16b', 12000000, '34646', 12344, '1759848098.webp', 3, 5);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -104,34 +105,34 @@ CREATE TABLE `usuarios` (
   `usuEmail` varchar(150) NOT NULL,
   `usuPass` varchar(255) NOT NULL,
   `usuEstado` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`idUsuario`, `usuNombre`, `usuApellido`, `usuEmail`, `usuPass`, `usuEstado`) VALUES
-(1, 'Fabian', 'Serfaty', 'hola@gmail.com', '12345', 1),
+(1, 'Fabiann', 'Serfaty', 'hola@gmail.com', '12345', 1),
 (2, 'Cristopher ', 'Lopez', 'cris@gmail.com', '1232123', 1);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categorias`
+-- Indices de la tabla `categorias`
 --
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`idCategoria`);
 
 --
--- Indexes for table `marcas`
+-- Indices de la tabla `marcas`
 --
 ALTER TABLE `marcas`
   ADD PRIMARY KEY (`idMarca`);
 
 --
--- Indexes for table `productos`
+-- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`idProducto`),
@@ -139,45 +140,45 @@ ALTER TABLE `productos`
   ADD KEY `idCategoria` (`idCategoria`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`idUsuario`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categorias`
+-- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
   MODIFY `idCategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `marcas`
+-- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
   MODIFY `idMarca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `productos`
+-- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `productos`
+-- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`idCategoria`) REFERENCES `categorias` (`idCategoria`) ON DELETE NO ACTION ON UPDATE CASCADE,

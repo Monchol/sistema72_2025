@@ -31,7 +31,7 @@ include 'includes/header.php';
                     <td> <?= $producto['prdPrecio'] ?></td>
                     <td> <?= $producto['prdPresentacion'] ?></td>
                     <td> <?= $producto['prdStock'] ?></td>
-                    <td> <img src="productos/<?= $producto['prdImagen'] ?>" class="img-thumbnail"></td>
+                    <td> <img src="productos/<?= $producto['prdImagen'] ?>" class="img-thumbnail-vanilla" alt="Prodcuto:<?= $producto["idProducto"]?>"></td>
                     <td> <?= $producto['mkNombre'] ?></td>
                     <td> <?= $producto['catNombre'] ?></td>
                     <td class="d-flex gap-2 justify-content-end">
@@ -50,5 +50,11 @@ include 'includes/header.php';
             ?>
         </tbody>
     </table>
+    <style>
+        .img-thumbnail-vanilla {
+            width: 40px !important;
+            aspect-ratio: 1/1 !important;
+        }
+    </style>
 </main>
 <?php include 'includes/footer.php'; ?>

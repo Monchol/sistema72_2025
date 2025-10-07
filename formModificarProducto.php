@@ -12,7 +12,7 @@ include 'includes/header.php';
 ?>
 <main class="container d-flex justify-content-center">
     
-    <form action="modificarProducto.php" method="POST" class="d-flex flex-column col-lg-6 col-md-9 col-sm-12 gap-3 m-5 p-5 border border-secondary rounded">
+    <form action="modificarProducto.php" method="post" class="d-flex flex-column col-lg-6 col-md-9 col-sm-12 gap-3 m-5 p-5 border border-secondary rounded">
         <h1>Modificar Producto</h1>
         <div class="form-group d-none">
             <label class="form-label" for="idProducto">ID:</label>
@@ -36,7 +36,8 @@ include 'includes/header.php';
         </div>
         <div class="form-grup">
             <label for="prdImagen">Imagen</label>
-            <input class="form-control" type="file" name="prdImagen" value="<?= $producto['prdImagen'] ?>">
+            <input type="hidden" name="imagenActual" value="<?= $producto['prdImagen'] ?>">
+            <input type="file" name="prdImagen" class="form-control" id="prdImagen" value="<?=$producto['prdImagen']?>">
         </div>
         <div class="form-group">
             <label for="idMarca">Marca</label>
