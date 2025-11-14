@@ -5,7 +5,7 @@
 const SERVER = "127.0.0.1";
 const USUARIO = "root";
 const CLAVE = "";
-const BASE = "72catalogo6";
+const BASE = "72catalogo";
 const PUERTO = 3306;
 function conectar()
 {
